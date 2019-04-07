@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import { addTimer } from '../actions';
+import './new-timer.css'
 
  class NewTimer extends Component {
      constructor (props) {
@@ -11,14 +12,15 @@ import { addTimer } from '../actions';
 
      render () {
          return (
-             <div>
+             <div className='new-timer'>
                 <input
+                    className='new-timer__input'
                     type='text'
                     placeholder="New Timer Name"
                     name="name"
                     value={this.state.name}
                     onChange={(e) => this.setState({ name: e.target.value })}/>
-                <button
+                <button className='new-timer__button'
                   onClick={(e) => {
                     this.props.addTimer(this.state.name)
                   }}>Save</button>
