@@ -6,6 +6,10 @@ import { Provider } from 'react-redux';
 
 import reducers from './reducers';
 
+import NewTimer from './components/new-timer'
+
+import ListTimers from './components/list-timers'
+
 const store = createStore(reducers);
 
 class App extends Component {
@@ -16,6 +20,8 @@ class App extends Component {
             <header className="App-header">
               <h1 className="App-title">Welcome to React</h1>
             </header>
+            <NewTimer />
+            <ListTimers />
             <p className="App-intro">
               Tmrz
             </p>
